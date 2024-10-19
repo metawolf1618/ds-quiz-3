@@ -1,0 +1,336 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+
+
+p {
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        font-style: normal;    
+}
+
+    .site-title {
+    font-family: "Jersey 25 Charted", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+  h1, h2, h3, h4, h5, h6, button, nav a {
+    
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+
+  }
+  
+
+  
+  
+
+ /*
+ =============================================
+                 HEADER
+ =============================================   
+ */
+
+     header {
+
+             background:black;
+             color: white;
+             padding: 10px 75px;
+             width: 100%;
+             position: absolute;
+             top: 0px;
+             left: 0px;
+             
+
+     }
+
+     header .site-logo h1 {
+
+               font-size: 45px;
+               margin-left: 70px;
+
+     }
+
+      .toggle-btn {
+
+                width: 45px;
+                height: 45px;
+                background: white;
+                border-radius: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                top: 22px;
+                left: 75px;
+                z-index: 10;
+
+     }
+
+     .toggle-btn .fa-solid {
+
+               font-size: 28px;
+               color: black;
+
+     }
+
+     .toggle-btn .fa-solid.hide {
+
+                display: none;
+     }
+
+ /*
+ =============================================
+                 HERO
+ =============================================   
+ */
+
+
+  .hero {
+
+         height: 100vh;
+         width: 100vw;
+         background-repeat: no-repeat;
+         background-size: cover;
+         position: relative;
+  }
+
+  .video-container {
+
+             width: 100%;
+             height: 100vh;
+             position: absolute;
+             top: 0px;
+             left: 0px;
+             z-index: -1;
+  }
+
+
+   .hero-video {
+
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+   }
+
+  .hero-container {
+
+        height:100vh;
+        width:100vw;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+  }
+
+  @keyframes slideInRight {
+
+           0% {opacity: 0; transform: translate(100%);}
+           30% {opacity: 0; transform: translate(80%);}
+           50% {transform: translateX(50%);}
+           100% {opacity: 1;transform: translateX(0%);}
+
+
+  }
+
+  .hero-container h1 {
+
+          font-size: 45px;
+          text-transform: uppercase;
+          animation:slideInRight .5s ease
+  }
+  @keyframes slideInLeft {
+
+        0% {opacity: 0; transform: translateX(-100%);}
+        30% {opacity: 0; transform: translatex(-80%);}
+        50% {opacity:.5; translateX (-50%);}
+        100% {opacity: 1;transform: translateX(0%);}
+  }
+
+  .hero-container h2 {
+
+          font-size: 32px;
+          text-transform: capitalize;
+          margin: 15px 0;
+
+  }
+
+
+  .hero-container button {
+
+          width: 300px;
+          height: 35px;
+          background: none;
+          border: 1px solid white;
+          border-radius: 100px;
+          color: white;
+          font-size: 21px;
+
+  }
+  
+  /*
+ =============================================
+                 NAV
+ =============================================   
+ */
+
+
+    .nav {
+
+          height: 100vh;
+          width: 100vw;
+          position: fixed;
+          top: 0px;
+          left: 0px;
+          z-index: 5;
+          transform: translateX(-100vw);
+          transition: all .5s ease-in-out;
+
+    }
+
+     .nav .slide-nav {
+
+          transform: translateX(0px);
+     }
+
+    .nav-container {
+
+
+        height: 100vh;
+        width: 100vw;
+        background:rgba(0, 0, 0, .9);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;  
+        align-items: center;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 5;
+
+    }
+
+    nav .nav-container a {
+         color: white;
+         font-size: 21px;
+         text-decoration: none;
+         margin-bottom: 15px;
+
+    }
+
+    nav .nav-container a:hover {
+      transform:scale(1.2);
+    }
+
+    /*
+ =============================================
+                 SERVICES
+ =============================================   
+ */
+
+ .services {
+
+          background:whitesmoke;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          
+ }
+
+ .service-title {
+
+
+             margin-bottom: 15px;
+
+
+
+
+ }
+
+ .services-container {
+
+       
+        width: 70%;
+        height: 50%;
+        display: flex;
+        justify-content: space-between;
+ }
+
+.flip-container {
+       width: 225px;
+       height: 225px;
+       position: relative;
+       perspective: 700px;
+}
+
+.front-side {
+
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 225px;
+        height: 225px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        backface-visibility: hidden;
+        transform: rotateY(0deg);
+        transition: ease 1s;
+        -webkit-box-shadow: 18px 10px 14px 4px rgba(0,0,0,0.5);
+-moz-box-shadow: 18px 10px 14px 4px rgba(0,0,0,0.5);
+box-shadow: 18px 10px 14px 4px rgba(0,0,0,0.5);
+}
+
+.back-side {
+
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5%;
+        width: 225px;
+        height: 225px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+        transition: ease 1s;
+        -webkit-box-shadow: 18px 10px 14px 4px rgba(0,0,0,0.5);
+-moz-box-shadow: 18px 10px 14px 4px rgba(0,0,0,0.5);
+box-shadow: 18px 10px 14px 4px rgba(0,0,0,0.5);
+}
+
+.back-side:hover {
+
+       transform: rotateY(180deg);
+       
+}
+
+.flip-container:hover .front-side {
+
+  transform:rotateY(-180deg)
+
+}
+
+.flip-container:hover .back-side {
+
+        transform:rotateY(0deg)
+      
+      }
